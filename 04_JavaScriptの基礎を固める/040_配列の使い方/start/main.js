@@ -1,0 +1,15 @@
+const person = {
+  name:  ['code', 'mafia'],
+  age: 32,
+  gender: 'male',
+  interests: {
+      sports: 'soccer',
+      music: 'piano'
+  }
+};
+
+console.log(person.name[]);
+
+
+
+
