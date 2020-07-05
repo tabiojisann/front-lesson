@@ -21,12 +21,17 @@ const books = {
 
     favorite: {
       name: ['FACTFULLNESS', '蹴りたい背中', '恋は雨上がりのように']
-    }
+    },
 }
 
+const read = books.novel.name.splice(1, 1);
 
+console.log(read + 'を読みました')
 
+const move = books.favorite.name.pop();
 
+books.comic.name.push(move);
+books.favorite.name.push(read);
 
-
+console.log(books);
 
