@@ -1,11 +1,15 @@
-function hello(name) {
-  console.log('hello' + name)
+function anything(a, b, callback) {
+    const result = callback(a, b);
+    console.log(result);
 }
 
-function getName() {
-  return 'tomtom'
+function kakezann(a, b) {
+  return a * b;
+}
+function tasizann(a, b) {
+  return a + b;
 }
 
-hello(getName);
-
+anything(2,2, kakezann);
+anything(1,44, tasizann);
 

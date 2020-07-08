@@ -27,3 +27,4 @@ function plus(a, b) {
 
 doSomething(2, 2, multiply);
 doSomething(2, 3, plus);
+
