@@ -1,15 +1,12 @@
-function anything(a, b, callback) {
-    const result = callback(a, b);
-    console.log(result);
+
+function roland(back) {
+  console.log(back());
 }
 
-function kakezann(a, b) {
-  return a * b;
-}
-function tasizann(a, b) {
-  return a + b;
-}
 
-anything(2,2, kakezann);
-anything(1,44, tasizann);
+
+
+roland( function() {
+  return '俺か俺以外か';
+})
 
