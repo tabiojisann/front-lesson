@@ -1,6 +1,23 @@
 const array = [1,2,3,4,5];
 
-array.forEach(function(val, i, ary) {
-  console.log(ary);
-})
+array.reduce(function(accu, curr) {
+  console.log(accu, curr);
+  return accu + curr;
+}, 10)
+
+const str = "animation";
+
+const strArray = str.split('');
+
+console.log(strArray);
+
+const result =  strArray.reduce((accu, curr) => {
+  return accu + '<' + curr + '>';
+}, "")
+
+console.log(result);
+
+
+
+
 
