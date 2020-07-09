@@ -36,13 +36,15 @@
 //   return '俺か' + otherThanThat;
 // }, '俺以外か');
 
-function roland(a, b, callback) {
-  const result = callback(a, b);
-  console.log(result);
-}
+// function roland(a, b, callback) {
+//   const result = callback(a, b);
+//   console.log(result);
+// }
 
-function remark(a, b) {
-  return a + b;
-}
+// function remark(a, b) {
+//   return a + b;
+// }
 
-roland('俺か', '俺以外か', remark);
+// roland('俺か', '俺以外か', remark);
+
+
