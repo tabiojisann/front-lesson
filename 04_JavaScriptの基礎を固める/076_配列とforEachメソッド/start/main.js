@@ -15,7 +15,10 @@ const result =  strArray.reduce((accu, curr) => {
   return accu + '<' + curr + '>';
 }, "")
 
-console.log(result);
+console.log(result)
+
+
+
 
 
 
