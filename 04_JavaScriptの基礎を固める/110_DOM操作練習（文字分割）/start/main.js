@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
    let concatStr = '';
 
    for(let c of str) {
-     c = c.replace(' ', '&nbsp;');
+     c = c.replace(/\s+/, '&nbsp;');
      concatStr = concatStr + `<span class="char">${c}</span>`;
    }
    el.innerHTML = concatStr;
 });
+
+
 
