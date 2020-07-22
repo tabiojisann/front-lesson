@@ -30,3 +30,5 @@ const obj2 = new MyObj();
 
 obj.printFullName();
 obj2.printFullName();
+
+
