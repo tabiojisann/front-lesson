@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 
-#container {
+section {
   position: relative;
   height: 100vh;
   background-color: teal;
