@@ -1,16 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const els = document.querySelectorAll('.animate-title');
-    const cb = function (entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // const ta = new TextAnimation(entry.target);
-                // ta.animate();
-                observer.unobserve(entry.target);
-            } else {
-            }
-        });
-    };
+    const cb = function() {
+      if(isIntersecting) {
+        const ta = new TextAnimation(el, isIntersecting);
+        ta.animate();
+      }
+    }
+
+    const so = new ScrollObserver('.animate-title', cb);
+
+    // const els = document.querySelectorAll('.animate-title');
+    // const cb = function (entries, observer) {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             // const ta = new TextAnimation(entry.target);
+    //             // ta.animate();
+    //             observer.unobserve(entry.target);
+    //         } else {
+    //         }
+    //     });
+    // };
     // const options = {
     //     root: null,
     //     rootMargin: "0px",
@@ -36,17 +45,17 @@ class ScrollObserver {
         const callback = function (entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // const ta = new TextAnimation(entry.target);
-                    // ta.animate();
+                  
 
-                    this.cb(entry, target, true);
+                    this.cb(entry.target, true);
                     observer.unobserve(entry.target);
                 } else {
+                    this.cb(entry.target, false);
                 }
             });
         };
 
         const io = new IntersectionObserver(callback.bind(this), this.options);
-        els.forEach(el => io.observe(el));
+        this.els.forEach(el => io.observe(el));
     }
 }
